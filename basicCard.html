@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dr. AnilKumar - WebCard</title>
+    <meta name="description" content="Digital Visiting Card for Dr. John Smith, MD - Cardiologist">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=Roboto:wght@300;400;500;600&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+    
+    <style>
+        .font-lora { font-family: 'Lora', serif; }
+        .font-roboto { font-family: 'Roboto', sans-serif; }
+        
+        .card-shadow {
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .gradient-bg {
+            background: linear-gradient(135deg, #f8fafc 0%, #e2e8f0 100%);
+        }
+        
+        .hover-scale:hover {
+            transform: scale(1.02);
+        }
+        
+        .contact-item:hover {
+            background: rgba(255, 255, 255, 0.8);
+            transform: translateY(-1px);
+        }
+        
+        .gradient-button {
+            background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+        }
+        
+        .gradient-button:hover {
+            background: linear-gradient(135deg, #2563eb 0%, #059669 100%);
+        }
+    </style>
+</head>
+<body class="min-h-screen gradient-bg py-8 px-4 font-roboto">
+    <!-- Main Card Container -->
+    <div class="max-w-sm mx-auto">
+        <!-- Single Unified Card -->
+        <div class="bg-white rounded-2xl card-shadow overflow-hidden">
+            
+            <!-- Profile Section -->
+            <div class="p-8 text-center">
+                <!-- Profile Image -->
+                <div class="relative inline-block mb-6">
+                    <div class="w-24 h-24 rounded-full overflow-hidden ring-4 ring-white shadow-lg mx-auto">
+                        <img 
+                            src="https://imagesx.practo.com/providers/dr-anilkumar-namburi-general-physician-hyderabad-baad5801-51a9-4450-8c59-b2ff60fa71aa.jpg?i_type=t_70x70"
+                            alt="Dr. John Smith"
+                            class="w-full h-full object-cover"
+                        >
+                    </div>
+                </div>
+                
+                <!-- Doctor Information -->
+                <h1 class="text-2xl font-bold text-gray-800 font-lora mb-2">Dr. Anilkumar Namburi</h1>
+                <p class="text-1xl font-thin text-gray-800 font-lora mb-2">MBBS, MD</p>
+                
+                <!-- Specialization Badge -->
+                <div class="inline-flex items-center gap-2 bg-blue-50 text-blue-600 rounded-full px-4 py-2 mb-4">
+                    <i data-lucide="stethoscope" class="w-4 h-4"></i>
+                    <span class="text-sm font-medium">Cardiologist</span>
+                </div>
+                
+                <!-- About Section -->
+                <p p id="about-text" class="text-gray-600 text-sm leading-relaxed mb-6 max-w-xs mx-auto">
+                    Dr. Anilkumar Namburi is a General Physician and Internal Medicine in Nizampet, Hyderabad </p>
+                    <button id="read-more-btn" class="text-blue-600 hover:underline mb-4 max-w-xs mx-auto block" style="display:none;">Read More</button>
+
+                <!-- Book Appointment Button -->
+                <!-- <button 
+                    onclick="openWhatsApp()"
+                    class="w-full gradient-button hover-scale text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md mb-6"
+                >
+                    Book Appointment
+                </button> -->
+            </div>
+            
+            <!-- Contact Details Section -->
+            <div class="px-8 pb-8 space-y-4">
+                <!-- Phone -->
+                <div class="contact-item p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center gap-4" onclick="makeCall()">
+                    <div class="w-10 h-10 bg-blue-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="phone" class="w-5 h-5 text-blue-600"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide font-medium">PHONE</p>
+                        <p class="text-sm font-medium text-gray-800">+91 8121872747</p>
+                    </div>
+                </div>
+                
+                <!-- Email -->
+                <div class="contact-item p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center gap-4" onclick="sendEmail()">
+                    <div class="w-10 h-10 bg-green-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="mail" class="w-5 h-5 text-green-600"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide font-medium">EMAIL</p>
+                        <p class="text-sm font-medium text-gray-800">lokeylitblog@gmail.com</p>
+                    </div>
+                </div>
+                
+                <!-- Location -->
+                <div class="contact-item p-4 rounded-xl transition-all duration-200 cursor-pointer flex items-center gap-4" onclick="openMaps()">
+                    <div class="w-10 h-10 bg-purple-100 rounded-full flex items-center justify-center">
+                        <i data-lucide="map-pin" class="w-5 h-5 text-purple-600"></i>
+                    </div>
+                    <div>
+                        <p class="text-xs text-gray-500 uppercase tracking-wide font-medium">LOCATION</p>
+                        <p class="text-sm font-medium text-gray-800">Virinchi Circle 8-2-672/5-6, Rd Number 1, Shyam Rao Nagar, Banjara Hills</p>
+                        <p class="text-xs text-gray-500">Hyderabad, Telangana 500034</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script>
+        // Initialize Lucide icons
+        lucide.createIcons();
+        
+        // Interactive Functions
+        function openWhatsApp() {
+            const phoneNumber = '+15551234567';
+            const message = 'Hello Dr. Smith, I would like to book an appointment.';
+            window.open(`https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`, '_blank');
+        }
+        
+        function makeCall() {
+            window.open('tel:+918121872747', '_self');
+        }
+        
+        function sendEmail() {
+            window.open('mailto:lokeylitblog@gmail.com?subject=Appointment Inquiry', '_self');
+        }
+        
+        function openMaps() {
+            const address = '123 Heartbeat Lane, Suite 101, Wellness City, CA 90210';
+            const encodedAddress = encodeURIComponent(address);
+            window.open(`https://maps.google.com/?q=${encodedAddress}`, '_blank');
+        }
+        
+// About section
+        const aboutTextEl = document.getElementById('about-text');
+        const readMoreBtn = document.getElementById('read-more-btn');
+
+        const maxLength = 200;
+        const fullText = aboutTextEl.textContent.trim();
+
+        if (fullText.length > maxLength) {
+            const shortText = fullText.slice(0, maxLength) + '...';
+            aboutTextEl.textContent = shortText;
+            readMoreBtn.style.display = 'block';
+
+            let expanded = false;
+            readMoreBtn.addEventListener('click', () => {
+            if (!expanded) {
+                aboutTextEl.textContent = fullText;
+                readMoreBtn.textContent = 'Read less';
+            } else {
+                aboutTextEl.textContent = shortText;
+                readMoreBtn.textContent = 'Read more';
+            }
+            expanded = !expanded;
+            });
+        }
+
+
+
+    </script>
+</body>
+</html>

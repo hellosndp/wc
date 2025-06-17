@@ -7,85 +7,78 @@
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="min-h-screen bg-gradient-to-br from-gray-200 via-blue-100 to-green-100 text-gray-800">
-  <div class="max-w-md mx-auto mt-10 bg-white shadow-xl rounded-3xl overflow-hidden">
-    <div class="p-6">
-      
-      <!-- Profile Top -->
-      <div class="flex items-center space-x-4">
-        <div class="relative">
-          <img 
-            id="doctorImage"
-            src="https://imagesx.practo.com/providers/dr-k-arvinda-sagar-general-physician-hyderabad-d34d453e-a952-4ada-b407-249ad982a144.jpg?i_type=t_70x70-2x-webp"
-            alt="Dr. K Arvinda Sagar"
-            class="w-30 h-30 rounded-full border-4 border-white shadow-xl"
-          />
+  <div class="px-4 sm:px-6 md:px-0">
+    <div class="max-w-md mx-auto mt-10 bg-white shadow-xl rounded-3xl overflow-hidden">
+      <div class="p-6">
+        
+        <!-- Profile Top -->
+        <div class="flex items-center space-x-4">
+          <div class="relative">
+            <img 
+              id="doctorImage"
+              src="https://imagesx.practo.com/providers/dr-k-arvinda-sagar-general-physician-hyderabad-d34d453e-a952-4ada-b407-249ad982a144.jpg?i_type=t_70x70-2x-webp"
+              alt="Dr. K Arvinda Sagar"
+              class="w-32 h-32 rounded-full border-4 border-white shadow-xl"
+            />
+          </div>
+          <div>
+            <div id="availabilityStatus" class="text-xs px-2 py-1 rounded-full font-semibold inline-block mb-1"></div>
+            <h2 class="text-xl font-semibold">Dr. K Arvinda Sagar</h2>
+            <p class="text-sm text-gray-500">MBBS, MS – General Surgery</p>
+            <p class="text-sm text-purple-700 font-medium bg-purple-50 px-2 py-0.5 rounded-md inline-block w-fit">General Physician</p>
+            <p class="text-sm text-blue-700 font-medium bg-blue-50 px-2 py-0.5 rounded-md inline-block w-fit mt-1">15+ years of Experience</p>
+          </div>
         </div>
-        <div>
-          <div id="availabilityStatus" class="text-xs px-2 py-1 rounded-full font-semibold inline-block mb-1"></div>
-          <h2 class="text-xl font-semibold">Dr. K Arvinda Sagar</h2>
-          <p class="text-sm text-gray-500">MBBS, MS – General Surgery</p>
-          <p class="text-sm text-purple-700 font-medium bg-purple-50 px-2 py-0.5 rounded-md inline-block w-fit">General Physician</p>
-          <p class="text-sm text-blue-700 font-medium bg-blue-50 px-2 py-0.5 rounded-md inline-block w-fit mt-1">15+ years of Experience</p>
+
+        <!-- Bio & Experience with More/Less -->
+        <div class="mt-4 text-sm text-gray-600">
+          <div id="bioText" class="transition-all duration-300"></div>
+          <button id="toggleMore" onclick="toggleBio()" class="text-blue-600 hover:underline text-xs mt-1 hidden">More</button>
         </div>
-      </div>
-      <br>
 
-      <!-- Bio & Experience with More/Less -->
-      <div class="mt-4 text-sm text-gray-600">
-        <div id="bioText" class="transition-all duration-300"></div>
-        <button id="toggleMore" onclick="toggleBio()" class="text-blue-600 hover:underline text-xs mt-1 hidden">More</button>
-      </div>
+        <!-- Consult CTA -->
+        <a href="https://wa.me/918121872747" target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white text-center font-medium py-2 px-4 rounded-lg w-full transition">
+          Consult Now
+        </a>
 
-      <!-- Consult CTA -->
-      <a href="https://wa.me/918121872747" target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white text-center font-medium py-2 px-4 rounded-lg w-full transition">
-        Consult Now
-      </a>
+        <hr class="my-6 border-t" />
 
-      <hr class="my-6 border-t" />
-
-      <!-- Contact & Location -->
-      <div class="space-y-4 text-sm">
-        <a href="tel:+918121872747" class="flex items-center text-blue-600 hover:underline">
-          <img src="https://img.icons8.com/ios-filled/24/4caf50/phone.png" class="w-4 h-4 mr-2" alt="Phone Icon" />
-          <span class="ml-2">+91 81218 72747</span>
-        </a>
-        <a href="mailto:lokeylitblog@gmail.com" class="flex items-center text-blue-600 hover:underline">
-          <img src="https://img.icons8.com/ios-filled/24/2196f3/email.png" class="w-4 h-4 mr-2" alt="Email Icon" />
-          <span class="ml-2">lokeylitblog@gmail.com</span>
-        </a>
-        <a href="https://www.google.com/maps?q=Sreshta+Multi+Speciality+Hospital+Ashok+Nagar+Sangareddy" target="_blank" class="flex items-center text-blue-600 hover:underline">
-          <img src="https://img.icons8.com/ios-filled/24/f44336/marker.png" class="w-4 h-4 mr-2" alt="Location Icon" />
-          <span class="ml-2">Sreshta Multi Speciality Hospital, Ashok Nagar, Sangareddy</span>
-        </a>
-        <a href="upi://pay?pa=hellosndp@okaxis&pn=Dr.KArvindaSagar&cu=INR" class="flex items-center text-blue-600 hover:underline">
-          <img src="https://img.icons8.com/ios-filled/24/9c27b0/money-transfer.png" class="w-4 h-4 mr-2" alt="Pay Icon" />
-          <span class="ml-2">Pay via UPI</span>
-        </a>
-        <a href="javascript:void(0)" onclick="toggleSchedule()" class="flex items-center text-blue-600 hover:underline">
-          <img src="https://img.icons8.com/ios-filled/24/000000/calendar--v1.png" class="w-4 h-4 mr-2" alt="Schedule Icon" />
-          <span class="ml-2">Weekly Timings</span>
-        </a>
-      </div>
-
-      <!-- Weekly Schedule -->
-      <div class="mt-4">
-        <ul id="schedule" class="hidden mt-2 text-sm text-gray-600">
-          <li>- Mon : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
-          <li>Tue : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
-          <li>Wed : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
-          <li>Thu : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
-          <li>Fri : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
-          <li>Sat : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
-          <li>Sun : Not Available</li>
-        </ul>
+        <!-- Contact & Location -->
+        <div class="space-y-4 text-sm">
+          <a href="tel:+918121872747" class="flex items-center text-blue-600 hover:underline">
+            <img src="https://img.icons8.com/ios-filled/24/4caf50/phone.png" class="w-4 h-4 mr-2" alt="Phone Icon" />
+            <span class="ml-2">+91 81218 72747</span>
+          </a>
+          <a href="mailto:lokeylitblog@gmail.com" class="flex items-center text-blue-600 hover:underline">
+            <img src="https://img.icons8.com/ios-filled/24/2196f3/email.png" class="w-4 h-4 mr-2" alt="Email Icon" />
+            <span class="ml-2">lokeylitblog@gmail.com</span>
+          </a>
+          <a href="https://www.google.com/maps?q=Sreshta+Multi+Speciality+Hospital+Ashok+Nagar+Sangareddy" target="_blank" class="flex items-center text-blue-600 hover:underline">
+            <img src="https://img.icons8.com/ios-filled/24/f44336/marker.png" class="w-4 h-4 mr-2" alt="Location Icon" />
+            <span class="ml-2">Sreshta Multi Speciality Hospital, Ashok Nagar, Sangareddy</span>
+          </a>
+          <a href="upi://pay?pa=hellosndp@okaxis&pn=Dr.KArvindaSagar&cu=INR" class="flex items-center text-blue-600 hover:underline">
+            <img src="https://img.icons8.com/ios-filled/24/9c27b0/money-transfer.png" class="w-4 h-4 mr-2" alt="Pay Icon" />
+            <span class="ml-2">Pay via UPI</span>
+          </a>
+          <!-- Weekly Timings -->
+          <button onclick="toggleSchedule()" class="flex items-center text-blue-600 hover:underline">
+            <img src="https://img.icons8.com/ios-filled/24/ff9800/calendar--v1.png" class="w-4 h-4 mr-2" alt="Schedule Icon" />
+            <span class="ml-2">View Weekly Timings</span>
+          </button>
+          <ul id="schedule" class="hidden mt-2 text-sm text-gray-600">
+            <li>Mon  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
+            <li>Tue  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
+            <li>Wed  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
+            <li>Thu  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
+            <li>Fri  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
+            <li>Sat  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
+            <li>Sun  : Not Available</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>
-  <div class="text-center text-sm text-gray-500 mt-4 mb-8">
-    Powered by 
-    <a href="https://StethBook.com" target="_blank" class="text-blue-600 font-medium hover:underline">StethBook</a>
-  </div>
-  
 
   <script>
     function toggleSchedule() {
@@ -136,7 +129,6 @@
       }
     }
 
-    // Bio Expansion Logic
     const fullBioText = `
       Practicing at Sreshta Multi Speciality Hospital, Sangareddy. Offers expertise in minimally invasive surgery, laser fistula, inguinal hernia, circumcision, I&D etc. 
       He is known for his accurate diagnosis and a compassionate approach to patient care. Over the years, Dr. Sagar has successfully treated thousands of patients and continues to upgrade his skills through conferences and workshops. 

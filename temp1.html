@@ -69,7 +69,7 @@
           <ul id="schedule" class="hidden mt-2 text-sm text-gray-600">
             <li>Mon  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
             <li>Tue  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
-            <li>Wed  : 12:00 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
+            <li>Wed  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
             <li>Thu  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
             <li>Fri  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
             <li>Sat  : 09:30 AM – 02:00 PM, 05:00 PM – 09:00 PM</li>
@@ -77,12 +77,21 @@
           </ul>
         </div>
       </div>
+      <!-- Share Button -->
+<button
+onclick="shareCard()"
+class="mt-6 w-full flex items-center justify-center gap-2 text-sm font-medium text-blue-600  hover:bg-gray-200 rounded-b-lg py-2 transition"
+>
+<!-- <img src="https://img.icons8.com/ios-filled/20/4caf50/share-rounded.png" class="w-4 h-4" alt="Share Icon" /> -->
+Share the Card
+</button>
+
     </div>
     <div class="text-center text-sm text-gray-500 mt-4 mb-8">
-        Powered by 
-        <a href="https://StethBook.com" target="_blank" class="text-blue-600 font-medium hover:underline">StethBook</a>
-      </div>
-      
+  Powered by 
+  <a href="https://StethBook.com" target="_blank" class="text-blue-600 font-medium hover:underline">StethBook</a>
+</div>
+
   </div>
 
   <script>
@@ -121,7 +130,7 @@
     }
 
     function updateAvailabilityStatus() {
-      const timeSlots = ["12:00 AM – 02:00 PM", "05:00 PM – 11:59 PM"];
+      const timeSlots = ["09:30 AM – 02:00 PM", "05:00 PM – 11:59 PM"];
       const isAvailable = isWithinTimeRanges(timeSlots);
       const statusDiv = document.getElementById('availabilityStatus');
 
@@ -177,6 +186,22 @@
 
     updateAvailabilityStatus();
     initializeBio();
+
+        //Share button functionality
+        function shareCard() {
+        const cardLink = "https://StethBook.com"; // Replace with actual card link
+        const message = `Check out Dr. K Arvinda Sagar’s digital card: ${cardLink}`;
+
+        // Copy to clipboard
+        navigator.clipboard.writeText(cardLink).then(() => {
+            console.log("Link copied to clipboard");
+        });
+
+        // Open WhatsApp
+        const whatsappURL = `https://wa.me/?text=${encodeURIComponent(message)}`;
+        window.open(whatsappURL, "_blank");
+        }
+
   </script>
 </body>
 </html>

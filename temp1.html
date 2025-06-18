@@ -4,12 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Dr. K Arvinda Sagar – Digital Visiting Card</title>
+
+  <!-- ✅ Favicon -->
+  <link rel="icon" href="https://financemarketgrowth.com/wp-content/uploads/2025/06/logo3-300x258.png" type="image/x-icon" />
+
+  <!-- ✅ Social Card Meta Tags -->
+  <meta property="og:title" content="Dr. K Arvinda Sagar – General Physician" />
+  <meta property="og:description" content="15+ years of experience. Consult now at Sreshta Multi Speciality Hospital, Sangareddy." />
+  <meta property="og:image" content="https://yourdomain.com/social-card.jpg" />
+  <meta property="og:url" content="https://yourdomain.com" />
+  <meta property="og:type" content="website" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Dr. K Arvinda Sagar – General Physician" />
+  <meta name="twitter:description" content="15+ years of experience. Consult now at Sreshta Multi Speciality Hospital, Sangareddy." />
+  <meta name="twitter:image" content="https://yourdomain.com/social-card.jpg" />
+
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
-<body class="min-h-screen flex flex-col bg-gradient-to-br from-purple-200 via-blue-100 to-green-100 text-gray-800">
 
-  <main class="px-4 sm:px-6 md:px-0 flex-grow">
-    <div class="w-full max-w-md mx-auto mt-8 sm:mt-12 md:mt-16 mb-4 bg-white shadow-xl rounded-3xl overflow-hidden">
+<body class="min-h-screen flex flex-col bg-gradient-to-br from-gray-200 via-blue-100 to-green-100 text-gray-800">
+
+  <main class="px-4 sm:px-6 md:px-0 flex-grow mt-6">
+    <div class="w-full max-w-md mx-auto bg-white shadow-xl rounded-3xl overflow-hidden">
       <div class="p-6">
         
         <!-- Profile Top -->
@@ -37,7 +53,7 @@
           <button id="toggleMore" onclick="toggleBio()" class="text-blue-600 hover:underline text-xs mt-1 hidden">More</button>
         </div>
 
-        <!-- Consult CTA -->
+        <!-- Consult CTA (No Shine Effect) -->
         <a href="https://wa.me/918121872747" target="_blank" class="mt-4 inline-block bg-green-500 hover:bg-green-600 text-white text-center font-medium py-2 px-4 rounded-lg w-full transition">
           Consult Now
         </a>
@@ -187,7 +203,7 @@
     initializeBio();
 
     function shareCard() {
-      const cardLink = "https://StethBook.com";
+      const cardLink = "https://yourdomain.com"; // Replace with your actual card link
       const message = `Check out Dr. K Arvinda Sagar’s digital card: ${cardLink}`;
 
       navigator.clipboard.writeText(cardLink).then(() => {

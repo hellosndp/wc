@@ -8,9 +8,8 @@
 </head>
 <body class="min-h-screen flex flex-col bg-gradient-to-br from-gray-200 via-blue-100 to-green-100 text-gray-800">
 
-  <!-- Main Content Container -->
-  <main class="px-4 sm:px-6 md:px-0 flex-grow flex items-center justify-center">
-    <div class="w-full max-w-md mx-auto mt-10 mb-4 bg-white shadow-xl rounded-3xl overflow-hidden">
+  <main class="px-4 sm:px-6 md:px-0 flex-grow">
+    <div class="w-full max-w-md mx-auto mt-4 mb-4 bg-white shadow-xl rounded-3xl overflow-hidden">
       <div class="p-6">
         
         <!-- Profile Top -->
@@ -89,7 +88,6 @@
     </div>
   </main>
 
-  <!-- Footer -->
   <footer class="mt-auto text-center text-sm text-gray-500 mb-4">
     Powered by 
     <a href="https://StethBook.com" target="_blank" class="text-blue-600 font-medium hover:underline">StethBook</a>
@@ -189,7 +187,7 @@
     initializeBio();
 
     function shareCard() {
-      const cardLink = "https://StethBook.com";
+      const cardLink = "https://StethBook.com"; // Replace with actual card link
       const message = `Check out Dr. K Arvinda Sagar’s digital card: ${cardLink}`;
 
       navigator.clipboard.writeText(cardLink).then(() => {
@@ -200,5 +198,6 @@
       window.open(whatsappURL, "_blank");
     }
   </script>
+
 </body>
 </html>
